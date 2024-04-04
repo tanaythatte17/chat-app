@@ -1,14 +1,8 @@
-/* MessageContainer.css */
 .message-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
-  background-color: #242424; /* White background color */
+  background-color: #242424; /* Dark background color */
   color: #333; /* Text color */
-  margin-left: 300px;
   position: relative;
-  max-height: calc(100vh - 100px); /* Adjusted height to leave space for MessageInput (assuming MessageInput height is 60px) */
   overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
@@ -19,21 +13,37 @@
   padding: 20px;
 }
 
-/* MessageContainer.css */
-.incoming-message {
-  align-self: flex-start; /* Messages from others align to the left */
-  background-color: #c9c9c9; /* Incoming message color */
+.incoming-message,
+.outgoing-message {
+  max-width: 70%; /* Limit message width */
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
-  margin-left: 20px;
 }
 
-.outgoing-message {
-  align-self: flex-end; /* Messages from self align to the right */
-  background-color: #007bff; /* Outgoing message color */
-  color: white; /* Text color for outgoing messages */
+.incoming-message {
+  background-color: #c9c9c9; /* Incoming message color */
+  max-width: 70%; /* Limit message width */
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
+  align-self: flex-start; /* Messages from others align to the left */
 }
+
+
+.outgoing-message {
+  background-color: #007bff; /* Outgoing message color */
+  color: white; /* Text color for outgoing messages */
+  align-self: flex-end; /* Messages from self align to the right */
+}
+
+@media (min-width: 768px) {
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 300px; /* Adjusted for sidebar width */
+    max-height: calc(100vh - 100px); /* Adjusted height to leave space for MessageInput (assuming MessageInput height is 60px) */
+  }
+}
+
