@@ -1,0 +1,32 @@
+/* MessageInput.css */
+.message-input {
+    position: fixed;
+  bottom: 0;
+  left: 300px; /* Match the value with the left padding of the MessageContainer */
+  width: calc(100% - 300px); /* Adjusted width to match the remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px;
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .message-input button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

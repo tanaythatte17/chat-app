@@ -1,0 +1,11 @@
+.selected{
+    color:red;
+}
+.online-dot {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px; /* Adjust this value to set the space between the dot and the user's name */
+  }
